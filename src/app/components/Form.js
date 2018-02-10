@@ -29,11 +29,15 @@ class Form extends Component {
     render() {
         return (
             <div>
-                <form onSubmit={this.submitForm.bind(this)}>
-                    <input type="text" placeholder="Full name" ref="name" />
-                    <input type="email" placeholder="Email address" ref="email" />
-                    <input type="tel" placeholder="Phone number" ref="phone" /> 
-                    <input type="submit" value="Add new" />                                    
+                <form  onSubmit={this.submitForm.bind(this)}>
+                    <table>
+                    <tr class="form">
+                    <td><input type="text" placeholder="Full name" ref="name" /> </td>
+                    <td><input type="email" placeholder="Email address" ref="email" /></td>
+                    <td><input type="tel" placeholder="Phone number" ref="phone" /> </td>
+                    <td><button type="submit" >Add new</button> </td>
+                    </tr>
+                    </table>                                  
                 </form>
             </div>
         );

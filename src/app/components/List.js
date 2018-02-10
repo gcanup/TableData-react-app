@@ -65,31 +65,21 @@ class List extends Component {
             });
         }
     }
-
     handleSort = (e, param) => {
         e.preventDefault();
 
         let tmpItems = this.state.users;
-        let tmpSortTypes = this.state.sortTypes;
-
-        console.log(tmpSortTypes);
 
         tmpItems.sort((a, b) => {
-            if (this.state.sortTypes[param] === 'asc') {
-                tmpSortTypes[param] = 'desc';
-                return (a[param] < b[param]) ? 1 : ((b[param] < a[param]) ? -1 : 0);
-            } else {
-                tmpSortTypes[param] = 'asc';
-                return (a[param] > b[param]) ? 1 : ((b[param] > a[param]) ? -1 : 0);
-            }
+            return (a.name > b.name) ? 1 : ((b.name > a.name) ? -1 : 0);      
         });
 
         this.setState({
-            users: tmpItems,
-            sortTypes: tmpSortTypes
+            users: tmpItems
         });
 
     }
+
 
     render() {
 
@@ -98,18 +88,20 @@ class List extends Component {
         });
 
         return (
-            <div className="main">
-
+            <div className="contents">
+                <h2>List of Participants </h2>
                 <Form itemAdd={this.handleItemAdd.bind(this)}></Form>
 
-                <table>
+              
+              <table className="randTable">
                     <thead>
                         <tr>
-                            <th onClick={(e) => this.handleSort(e, 'name')}>Name</th>
-                            <th onClick={(e) => this.handleSort(e, 'email')}>Email address</th>
-                            <th onClick={(e) => this.handleSort(e, 'phone')}>Phone number</th>
-                            <th>&nbsp;</th>
+                            <th onClick={(e) => this.handleSort(e, 'name')}>Name <span className="glyphicon glyphicon-arrow-down"></span></th>
+                            <th>Email Address</th>
+                            <th>Phone Number</th>
+                            <th className="actions">Action</th>
                         </tr>
+
                     </thead>
                     <tbody>
                         {listItems}

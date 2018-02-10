@@ -1,54 +1,147 @@
-body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-}
 
-.main {
-    padding: 20px;
-}
 
-table, td, th {
-    text-align: left;
-}
 
-table {
-    border-collapse: collapse;
-    width: 100%;
-}
+* {
+    margin:0;
+    padding:0;}
+    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  padding-left: 16px;
 
-th, td {
-    padding: 15px;
-}
 
-th{
-    cursor: pointer;
 }
-
-tr {
-    border: 1px solid #ddd;    
+    
+    body {
+    background: #ddd;
+    }
+.container {
+    width: 976px;
+    margin: 0 auto;
+    background: #f1f1f1;
+    padding: 0px;
 }
+.contents {
+    width: 912px;
+    margin: 0 auto;}
+    
+    
+.clear {
+    clear:both;}
 
-input {
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-right: 20px;
-}
 
-input[type=submit] {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
+
+
+/*************header*****************/
+header {
+    
+    background: #adb5bd;}
+.logo {
+    float:left;
+    width: 32px;
+    height:32px;
+    padding-top: 32px;
+    }
+.top-mid {
+    float:left;
+    width: 40%;
+    color:#ffffff;
+    padding: 32px 0 16px 15px;
+    padd
+    box-sizing:border-box;
+    }
+.top-mid p{
+    font-size:32px;}
+
+
+
+
+/***************/
+
+
+.contents h2 {
+    padding: 32px 0 32px 0;
+    color: #757575;
+    font-weight: 600;
+    }    
+.contents table {
+    background: #ffffff;
+    width:100%;
+    margin-bottom: 10px;
+    }
+    
+.form {
+    height:40px;
+    padding: 16px;
+    }
+.form button {
+    padding: 12px;
     border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
+    height:40px;
+    width:150px;
+    color: #757575;
+    }
+.form input {
+    height:40px;
+    border: none;
+     background: #fafafa;
 
-input[type=submit]:hover {
-    background-color: #45a049;
+ }
+.form td {
+    padding:16px;}
+
+    /******************user table***********/
+.randTable thead {
+    width:100%;
+    background: #fff;}    
+.randTable thead th{
+    height: 48px;
+    color: #757575;
+    font-size: 14px;
+    font-weight: 500;
+    width: 25%;
+    text-align: left;
+    padding-left: 32px;} 
+.randTable tbody {
+    background: #fff;
+
+}
+.randTable tbody td {
+    height: 72px;
+    color: #505050;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    padding-left: 32px; 
+}
+.randTable tbody input{
+    height: 40px;
+    border: none;
+     background: #fafafa;
+}
+.actions {
+text-align: center !important;
+padding-right: 60px;}
+.cancel{ 
+  height: 40px;
+    background: #f1f1f1;
+    color: 07t !important;
+    font-size: 16px;
+    font-weight: 500;
+    width: 70px;
+    margin-right: 5px}
+
+.save {
+    height: 40px;
+    background-color: #07f;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    width: 70px;
+
+}
+.glyph {
+
+    color: #909090;
+    height: 24px;
+    width: 24px;
 }

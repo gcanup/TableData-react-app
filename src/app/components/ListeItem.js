@@ -42,6 +42,8 @@ class ListItem extends Component {
     renderItemOrEditField() {
         if (this.state.isEditing) {
             return (
+           
+               
                 <tr>
                     <td>
                         <input type="text" placeholder="Full name" ref="name" defaultValue={this.props.user.name} />
@@ -53,22 +55,28 @@ class ListItem extends Component {
                         <input type="tel" placeholder="Phone number" ref="phone" defaultValue={this.props.user.phone}  />
                     </td>
                     <td>
-                        <button type="button" onClick={this.handleCancel.bind(this)}>Cancel</button>
-                        <button type="button" onClick={this.handleSave.bind(this)}>Save</button>                        
+                        <button className="cancel" type="button" onClick={this.handleCancel.bind(this)}>Cancel</button>
+                        <button className="save"type="button" onClick={this.handleSave.bind(this)}>Save</button>                        
                     </td>
                 </tr>
+               
+                
+            
+                
             );
         } else {
             return (
+               
                 <tr>
                     <td>{this.props.user.name}</td>
                     <td>{this.props.user.email}</td>
                     <td>{this.props.user.phone}</td>
-                    <td>
-                        <a onClick={this.handleEdit.bind(this)}>Edit</a> &nbsp;
-                        <a onClick={this.handleDelete.bind(this)}>Delete</a>
+                    <td className="actions">
+                        <a onClick={this.handleEdit.bind(this)}><span className="glyphicon glyphicon-pencil glyph"></span></a> &nbsp;
+                        <a onClick={this.handleDelete.bind(this)}><span className="glyphicon glyphicon-remove glyph"></span></a>
                     </td>
                 </tr>
+                
             );
         }
     }
